@@ -1,21 +1,31 @@
-import Hello from './Hello.vue'
-import HelloJsx from './Hello.jsx'
+import VuePageTransition from './components/VuePageTransition.vue'
 
-function plugin (Vue) {
-  Vue.component('hello', Hello)
-  Vue.component('hello-jsx', HelloJsx)
+// Install the components
+export function install (Vue) {
+  Vue.component('vue-page-transition', VuePageTransition)
 }
 
-// Install by default if using the script tag
-if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(plugin)
+// Expose the components
+export {
+  VuePageTransition,
+}
+
+// Plugin
+const plugin = {
+  /* eslint-disable no-undef */
+  version: VERSION,
+  install,
 }
 
 export default plugin
-const version = '__VERSION__'
-// Export all components too
-export {
-  Hello,
-  HelloJsx,
-  version
+
+// Auto-install
+let GlobalVue = null
+if (typeof window !== 'undefined') {
+  GlobalVue = window.Vue
+} else if (typeof global !== 'undefined') {
+  GlobalVue = global.Vue
+}
+if (GlobalVue) {
+  GlobalVue.use(plugin)
 }
