@@ -1,19 +1,19 @@
 <template>
-  <div>
-    <vue-page-transition-fade v-if="name === 'fade'">
-      <slot></slot>
-    </vue-page-transition-fade>
-  </div>
+  <component :is="`vue-page-transition-${name}`">
+    <slot></slot>
+  </component>
 </template>
 
 <script>
 import VuePageTransitionFade from './transitions/VuePageTransitionFade.vue'
+import VuePageTransitionFadeInUp from './transitions/VuePageTransitionFadeInUp.vue'
 
 export default {
   name: 'vue-page-transition',
   props: ['name'],
   components: {
     VuePageTransitionFade,
+    VuePageTransitionFadeInUp,
   },
 }
 </script>
