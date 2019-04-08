@@ -82,18 +82,18 @@ You can make use of the following properties in order to customize your typing e
 Here you can find a list of all the available transitions so far.
 
 - [Fade](#fade)
-  - [default](#default)
+  - [default](#default-fade)
   - [up](#up)
   - [right](#right)
   - [down](#down)
   - [left](#left)
 - [Zoom](#zoom)
-  - [default](#default)
+  - [default](#default-zoom)
 
 ## Fade
 The default fade transtion smoothly changes the opacity between two elements / pages with the additional ability to add some direction.
 
-### Default
+### Default Fade
 The default fade transtion smoothly changes the visibility of the pages without any directional change.
 
 **Usage:**
@@ -134,7 +134,7 @@ The old page smoothly disappears, while the new page fades in from left.
 ```
 
 ## Zoom
-### Default
+### Default Zoom
 The old page smoothly zooms out and then new page zooms in.
 
 **Usage:**
