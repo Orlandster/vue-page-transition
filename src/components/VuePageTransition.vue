@@ -1,21 +1,21 @@
 <template>
-  <component :is="`vue-page-transition-${name}`">
+  <component :is="name">
     <slot></slot>
   </component>
 </template>
 
 <script>
-import VuePageTransitionFade from './transitions/VuePageTransitionFade.vue'
-import VuePageTransitionFadeInUp from './transitions/VuePageTransitionFadeInUp.vue'
-import VuePageTransitionFadeInRight from './transitions/VuePageTransitionFadeInRight.vue'
+import Fade from './transitions/Fade/Fade.vue'
+import FadeInUp from './transitions/Fade/FadeInUp.vue'
+import FadeInRight from './transitions/Fade/FadeInRight.vue'
 
 export default {
   name: 'vue-page-transition',
   props: ['name'],
   components: {
-    VuePageTransitionFade,
-    VuePageTransitionFadeInUp,
-    VuePageTransitionFadeInRight,
+    Fade,
+    FadeInUp,
+    FadeInRight,
   },
 }
 </script>
