@@ -78,6 +78,25 @@ You can make use of the following properties in order to customize your typing e
 |----------|--------|-------------------------------------|--------------------------|
 | name     | String | The name of the desired transition. | `name="'fade-in-right'"` |
 
+## Overwrite transiton for single route
+We've now covered how to set up a global transition by using the `name` attribute. But what if I want to use multiple transitions depending on the route? In this case you can simple add a `transition` property to the meta fields of your specific route. 
+
+Here's an example on how your router could look like:
+
+```js
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld,
+      // overwrite default transition
+      meta: { transition: 'zoom' },
+    },
+  ]
+})
+```
+
 # Transitions
 Here you can find a list of all the available transitions so far.
 
