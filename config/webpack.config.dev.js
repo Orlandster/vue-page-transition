@@ -2,8 +2,8 @@ var merge = require('webpack-merge')
 var base = require('./webpack.config.base')
 var path = require('path')
 
-var outputFile = 'vue-page-transitions'
-var globalName = 'VuePageTransitions'
+var outputFile = 'vue-page-transition'
+var globalName = 'VuePageTransition'
 
 module.exports = merge(base, {
   output: {

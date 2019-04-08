@@ -1,8 +1,7 @@
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-var outputFile = 'vue-page-transitions'
-var globalName = 'VuePageTransitions'
+var outputFile = 'vue-page-transition'
 
 var config = require('../package.json')
 

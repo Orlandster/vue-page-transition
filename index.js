@@ -1,3 +1,3 @@
-export { default } from './dist/vue-page-transitions.common'
-export * from './dist/vue-page-transitions.common'
-import './dist/vue-page-transitions.css'
+export { default } from './dist/vue-page-transition.common'
+export * from './dist/vue-page-transition.common'
+import './dist/vue-page-transition.css'
