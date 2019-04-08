@@ -87,6 +87,8 @@ Here you can find a list of all the available transitions so far.
   - [right](#right)
   - [down](#down)
   - [left](#left)
+- [Zoom](#zoom)
+  - [default](#default)
 
 ## Fade
 The default fade transtion smoothly changes the opacity between two elements / pages with the additional ability to add some direction.
@@ -94,7 +96,7 @@ The default fade transtion smoothly changes the opacity between two elements / p
 ### Default
 The default fade transtion smoothly changes the visibility of the pages without any directional change.
 
-Usage:
+**Usage:**
 ```html
 <vue-page-transition name="fade">...</vue-page-transition>
 ```
@@ -102,7 +104,7 @@ Usage:
 ### Up
 The old page smoothly disappears, while the new page fades in from the bottom.
 
-Usage:
+**Usage:**
 ```html
 <vue-page-transition name="fade-in-up">...</vue-page-transition>
 ```
@@ -110,7 +112,7 @@ Usage:
 ### Right
 The old page smoothly disappears, while the new page fades in from right.
 
-Usage:
+**Usage:**
 ```html
 <vue-page-transition name="fade-in-right">...</vue-page-transition>
 ```
@@ -118,7 +120,7 @@ Usage:
 ### Down
 The old page smoothly disappears, while the new page fades in from top.
 
-Usage:
+**Usage:**
 ```html
 <vue-page-transition name="fade-in-down">...</vue-page-transition>
 ```
@@ -126,9 +128,18 @@ Usage:
 ### Left
 The old page smoothly disappears, while the new page fades in from left.
 
-Usage:
+**Usage:**
 ```html
 <vue-page-transition name="fade-in-left">...</vue-page-transition>
+```
+
+## Zoom
+### Default
+The old page smoothly zooms out and then new page zooms in.
+
+**Usage:**
+```html
+<vue-page-transition name="zoom">...</vue-page-transition>
 ```
 
 ---
