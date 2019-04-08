@@ -1,12 +1,12 @@
 # vue-page-transition
 
+![](demo.gif)
+
 [![npm](https://img.shields.io/npm/v/vue-page-transition.svg) ![npm](https://img.shields.io/npm/dm/vue-page-transition.svg)](https://www.npmjs.com/package/vue-page-transition)
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8789841c45264d19ad2595061437a8a9)](https://www.codacy.com/app/orlando.wenzinger/vue-typed-js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Orlandster1998/vue-typed-js&amp;utm_campaign=Badge_Grade)
 
 A lean Vue.js plugin for page / route transitions.
-
-![](demo.gif)
 
 ## Table of contents
 
