@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'vue-page-transition-fade-in-up',
+  name: 'fade-in-up',
 }
 </script>
 
