@@ -8,6 +8,7 @@
 import Fade from './transitions/Fade/Fade.vue'
 import FadeInUp from './transitions/Fade/FadeInUp.vue'
 import FadeInRight from './transitions/Fade/FadeInRight.vue'
+import FadeInDown from './transitions/Fade/FadeInDown.vue'
 import FadeInLeft from './transitions/Fade/FadeInLeft.vue'
 
 export default {
@@ -18,6 +19,7 @@ export default {
     FadeInUp,
     FadeInRight,
     FadeInLeft,
+    FadeInDown,
   },
 }
 </script>

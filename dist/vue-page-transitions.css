@@ -58,6 +58,30 @@ to {
   animation-name: fadeInRight;
 }
 
+@keyframes fadeInDown {
+from {
+    transform: translate3d(0, -40px, 0);
+}
+to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+}
+.fade-in-down-leave-to[data-v-7dbe98c1] {
+  opacity: 0;
+  transition: opacity .3s;
+}
+.fade-in-down-enter[data-v-7dbe98c1] {
+  opacity: 0;
+  transform: translate3d(0, -40px, 0);
+}
+.fade-in-down-enter-to[data-v-7dbe98c1] {
+  opacity: 0;
+  animation-duration: .7s;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+}
+
 @keyframes fadeInLeft {
 from {
     transform: translate3d(-40px, 0, 0);
