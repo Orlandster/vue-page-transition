@@ -1,7 +1,7 @@
 {
   "name": "vue-page-transition",
   "description": "A lean Vue.js plugin for page / route transitions.",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": {
     "name": "Orlando Wenzinger",
     "email": "orlando.wenzinger@bluewin.ch"
@@ -17,6 +17,10 @@
     "vue transition",
     "vue animation"
   ],
+  "homepage": "https://github.com/Orlandster/vue-page-transition",
+  "bugs": {
+    "url": "https://github.com/Orlandster/vue-page-transition/issues"
+  },
   "repository": "https://github.com/Orlandster/vue-page-transition",
   "license": "MIT",
   "main": "dist/vue-page-transition.common.js",
