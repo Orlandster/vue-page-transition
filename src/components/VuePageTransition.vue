@@ -10,6 +10,7 @@ import FadeInUp from './transitions/Fade/FadeInUp.vue'
 import FadeInRight from './transitions/Fade/FadeInRight.vue'
 import FadeInDown from './transitions/Fade/FadeInDown.vue'
 import FadeInLeft from './transitions/Fade/FadeInLeft.vue'
+import Zoom from './transitions/Zoom/Zoom.vue'
 
 export default {
   name: 'vue-page-transition',
@@ -20,6 +21,7 @@ export default {
     FadeInRight,
     FadeInLeft,
     FadeInDown,
+    Zoom,
   },
 }
 </script>

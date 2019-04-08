@@ -105,3 +105,15 @@ to {
   animation-fill-mode: both;
   animation-name: fadeInLeft;
 }
+
+.zoom-enter-active[data-v-5f64e6cc],
+.zoom-leave-active[data-v-5f64e6cc] {
+  transition-duration: 0.3s;
+  transition-property: all;
+  transition-timing-function: ease;
+}
+.zoom-enter[data-v-5f64e6cc],
+.zoom-leave-to[data-v-5f64e6cc] {
+  opacity: 0;
+  transform: scale(0);
+}
