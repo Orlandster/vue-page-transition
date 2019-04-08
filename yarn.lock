@@ -2399,6 +2399,11 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
   integrity sha512-6uHUhOPEBgQ24HM+r6b/QwWfZq+yiFcipKFrOFiBEnWdy5sdzYoi+pJeQaPI5qOLRFqWmAXUPQNsielzdLoecA==
 
+gsap@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-2.1.2.tgz#2ad017608f883379e546d8bcc3046182083d4da2"
+  integrity sha512-7saMzK2HQ3OD4/hbygtkh0uAK8LUqcom6abL4YqGttyxAQdEvywQOw5VK3obKQ7GaLU8KhszArKJPxIKe8mbvg==
+
 har-schema@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/har-schema/-/har-schema-2.0.0.tgz#a94c2224ebcac04782a0d9035521f24735b7ec92"
