@@ -146,7 +146,7 @@ function install(Vue) {
 // Plugin
 const plugin = {
   /* eslint-disable no-undef */
-  version: "0.2.0",
+  version: "0.2.1",
   install
 };
 

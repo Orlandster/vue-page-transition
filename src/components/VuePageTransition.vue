@@ -37,6 +37,7 @@ export default {
   transition-property: opacity;
   transition-timing-function: ease;
 }
+
 .fade-enter,
 .fade-leave-active {
   opacity: 0
@@ -170,6 +171,34 @@ export default {
 .zoom-leave-to {
   opacity: 0;
   transform: scale(0);
+}
+
+// FlipX
+.flip-x-enter-active,
+.flip-x-leave-active {
+  transition-duration: 0.3s;
+  transition-property: all;
+  transition-timing-function: ease;
+}
+
+.flip-x-enter,
+.flip-x-leave-to {
+  transform: rotateX(-180deg);
+  opacity: 0;
+}
+
+// FlipY
+.flip-y-enter-active,
+.flip-y-leave-active {
+  transition-duration: 0.3s;
+  transition-property: all;
+  transition-timing-function: ease;
+}
+
+.flip-y-enter,
+.flip-y-leave-to {
+  transform: rotateY(-180deg);
+  opacity: 0;
 }
 </style>
 
