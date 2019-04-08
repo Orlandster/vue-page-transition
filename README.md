@@ -6,11 +6,14 @@
 
 A lean Vue.js plugin for page / route transitions.
 
+![](demo.gif)
+
 ## Table of contents
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Transitions](#transitions)
+- [Demo](#demo)
 
 # Installation
 
@@ -160,6 +163,9 @@ The old page smoothly zooms out and then new page zooms in.
 ```html
 <vue-page-transition name="zoom">...</vue-page-transition>
 ```
+
+# Demo
+Checkout the demo [here](https://orlandster.github.io/vue-page-transition).
 
 ---
 
