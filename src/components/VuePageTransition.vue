@@ -7,6 +7,7 @@
 <script>
 import VuePageTransitionFade from './transitions/VuePageTransitionFade.vue'
 import VuePageTransitionFadeInUp from './transitions/VuePageTransitionFadeInUp.vue'
+import VuePageTransitionFadeInRight from './transitions/VuePageTransitionFadeInRight.vue'
 
 export default {
   name: 'vue-page-transition',
@@ -14,6 +15,7 @@ export default {
   components: {
     VuePageTransitionFade,
     VuePageTransitionFadeInUp,
+    VuePageTransitionFadeInRight,
   },
 }
 </script>
