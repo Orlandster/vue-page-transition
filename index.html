@@ -49,6 +49,11 @@
             <b-dropdown-item to="/fade/left">Left</b-dropdown-item>
           </b-nav-item-dropdown>
 
+          <b-nav-item-dropdown text="Flip" left>
+            <b-dropdown-item to="/flip/x">X</b-dropdown-item>
+            <b-dropdown-item to="/flip/y">Y</b-dropdown-item>
+          </b-nav-item-dropdown>
+
           <b-nav-item-dropdown text="Zoom" left>
             <b-dropdown-item to="/zoom/default">Default</b-dropdown-item>
           </b-nav-item-dropdown>
@@ -163,6 +168,36 @@
         `
       })
 
+      var flipX = Vue.component('flip-x', {
+        template: `
+          <div>
+            <h1>Flip X</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+            <hr>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+        `
+      })
+
+      var flipY = Vue.component('flip-y', {
+        template: `
+          <div>
+            <h1>Flip Y</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+            <hr>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+        `
+      })
+
       var router = new VueRouter({
         routes: [
           {
@@ -206,6 +241,18 @@
             name: 'Default Zoom - Vue Page Transition',
             component: zoom,
             meta: { transition: 'zoom' },
+          },
+          {
+            path: '/flip/x',
+            name: 'Flip X - Vue Page Transition',
+            component: flipX,
+            meta: { transition: 'flip-x' },
+          },
+          {
+            path: '/flip/y',
+            name: 'Flip Y - Vue Page Transition',
+            component: flipY,
+            meta: { transition: 'flip-y' },
           }
         ]
       })
