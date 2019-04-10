@@ -144,3 +144,55 @@ to {
   transform: rotateY(-180deg);
   opacity: 0;
 }
+.splash[data-v-4c22b934] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 0;
+  background: black;
+  transition-duration: .45s;
+}
+.splash-enter + .splash[data-v-4c22b934],
+.splash-leave-to + .splash[data-v-4c22b934] {
+  width: 0;
+}
+.splash-enter-active + .splash[data-v-4c22b934],
+.splash-leave-active + .splash[data-v-4c22b934] {
+  width: 100vw;
+}
+.splash-enter-active + .splash[data-v-4c22b934] {
+  transition-timing-function: ease-in;
+}
+.splash-leave-active + .splash[data-v-4c22b934] {
+  transition-timing-function: ease-out;
+}
+.splash-enter-active[data-v-4c22b934],
+.splash-leave-active[data-v-4c22b934] {
+  transition-duration: .45s;
+}
+.splash-fade[data-v-4c22b934] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 0;
+  background: black;
+  transition: .3s ease-out;
+}
+.splash-fade-enter + .splash[data-v-4c22b934],
+.splash-fade-leave-to + .splash[data-v-4c22b934] {
+  width: 0;
+}
+.splash-fade-enter-active + .splash[data-v-4c22b934],
+.splash-fade-leave-active + .splash[data-v-4c22b934] {
+  width: 80vw;
+}
+.splash-fade-enter[data-v-4c22b934],
+.splash-fade-leave-active[data-v-4c22b934] {
+  transform: translate3d(0, -40px, 0);
+}
+.splash-fade-enter-active[data-v-4c22b934],
+.splash-fade-leave-active[data-v-4c22b934] {
+  transition: .3s ease-out;
+}

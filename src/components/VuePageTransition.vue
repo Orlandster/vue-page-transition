@@ -1,10 +1,13 @@
 <template>
-  <transition
-    :name="transition"
-    :mode="mode"
-  >
-    <slot></slot>
-  </transition>
+  <div>
+    <transition
+      :name="transition"
+      :mode="mode"
+    >
+      <slot></slot>
+    </transition>
+    <div class="splash"></div>
+  </div>
 </template>
 
 <script>
@@ -199,6 +202,69 @@ export default {
 .flip-y-leave-to {
   transform: rotateY(-180deg);
   opacity: 0;
+}
+
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 0;
+  background: black;
+  transition-duration: .45s;
+}
+
+.splash-enter + .splash,
+.splash-leave-to + .splash {
+  width: 0;
+}
+
+.splash-enter-active + .splash,
+.splash-leave-active + .splash {
+  width: 100vw;
+}
+
+.splash-enter-active + .splash {
+  transition-timing-function: ease-in;
+}
+
+.splash-leave-active + .splash {
+  transition-timing-function: ease-out;
+}
+
+.splash-enter-active,
+.splash-leave-active {
+  transition-duration: .45s;
+}
+
+.splash-fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 0;
+  background: black;
+  transition: .3s ease-out;
+}
+
+.splash-fade-enter + .splash,
+.splash-fade-leave-to + .splash {
+  width: 0;
+}
+
+.splash-fade-enter-active + .splash,
+.splash-fade-leave-active + .splash {
+  width: 80vw;
+}
+
+.splash-fade-enter,
+.splash-fade-leave-active {
+  transform: translate3d(0, -40px, 0);
+}
+
+.splash-fade-enter-active,
+.splash-fade-leave-active {
+  transition: .3s ease-out;
 }
 </style>
 
