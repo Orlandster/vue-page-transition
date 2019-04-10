@@ -6,7 +6,10 @@
     >
       <slot></slot>
     </transition>
-    <div class="splash"></div>
+    <div class="overlay-top"></div>
+    <div class="overlay-right"></div>
+    <div class="overlay-bottom"></div>
+    <div class="overlay-left"></div>
   </div>
 </template>
 
@@ -48,6 +51,9 @@ export default {
 @import '../styles/transitions/flip/flip-y';
 
 // splash
-@import '../styles/transitions/splash/splash';
+@import '../styles/transitions/splash/splash-down';
+@import '../styles/transitions/splash/splash-right';
+@import '../styles/transitions/splash/splash-up';
+@import '../styles/transitions/splash/splash-left';
 </style>
 
