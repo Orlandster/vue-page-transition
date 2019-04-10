@@ -1,0 +1,12 @@
+.zoom-enter-active,
+.zoom-leave-active {
+  transition-duration: 0.3s;
+  transition-property: all;
+  transition-timing-function: ease;
+}
+
+.zoom-enter,
+.zoom-leave-to {
+  opacity: 0;
+  transform: scale(0);
+}

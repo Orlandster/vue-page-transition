@@ -1,0 +1,12 @@
+.flip-x-enter-active,
+.flip-x-leave-active {
+  transition-duration: 0.3s;
+  transition-property: all;
+  transition-timing-function: ease;
+}
+
+.flip-x-enter,
+.flip-x-leave-to {
+  transform: rotateX(-180deg);
+  opacity: 0;
+}

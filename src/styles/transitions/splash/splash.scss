@@ -1,0 +1,32 @@
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 0;
+  background: black;
+  transition-duration: .45s;
+}
+
+.splash-enter + .splash,
+.splash-leave-to + .splash {
+  width: 0;
+}
+
+.splash-enter-active + .splash,
+.splash-leave-active + .splash {
+  width: 100vw;
+}
+
+.splash-enter-active + .splash {
+  transition-timing-function: ease-in;
+}
+
+.splash-leave-active + .splash {
+  transition-timing-function: ease-out;
+}
+
+.splash-enter-active,
+.splash-leave-active {
+  transition-duration: .45s;
+}

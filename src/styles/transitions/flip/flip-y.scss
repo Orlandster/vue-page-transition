@@ -1,0 +1,12 @@
+.flip-y-enter-active,
+.flip-y-leave-active {
+  transition-duration: 0.3s;
+  transition-property: all;
+  transition-timing-function: ease;
+}
+
+.flip-y-enter,
+.flip-y-leave-to {
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
