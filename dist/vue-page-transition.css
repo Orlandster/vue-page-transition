@@ -370,7 +370,7 @@ to {
 .overlay-up-down-leave-to ~ .overlay-bottom[data-v-4c22b934],
 .overlay-up-down-leave-to ~ .overlay-top[data-v-4c22b934],
 .overlay-up-down-leave-to ~ .overlay-top[data-v-4c22b934] {
-  height: 50vh;
+  height: 51vh;
 }
 .overlay-up-down-enter-active ~ .overlay-bottom[data-v-4c22b934],
 .overlay-up-down-enter-active ~ .overlay-top[data-v-4c22b934] {
@@ -382,5 +382,27 @@ to {
 }
 .overlay-up-down-enter-active[data-v-4c22b934],
 .overlay-up-down-leave-active[data-v-4c22b934] {
+  transition-duration: .35s;
+}
+.overlay-left-right-enter ~ .overlay-left[data-v-4c22b934],
+.overlay-left-right-enter ~ .overlay-right[data-v-4c22b934] {
+  width: 0;
+}
+.overlay-left-right-leave-active ~ .overlay-left[data-v-4c22b934],
+.overlay-left-right-leave-to ~ .overlay-left[data-v-4c22b934],
+.overlay-left-right-leave-to ~ .overlay-right[data-v-4c22b934],
+.overlay-left-right-leave-to ~ .overlay-right[data-v-4c22b934] {
+  width: 51vw;
+}
+.overlay-left-right-enter-active ~ .overlay-left[data-v-4c22b934],
+.overlay-left-right-enter-active ~ .overlay-right[data-v-4c22b934] {
+  transition-timing-function: ease-in;
+}
+.overlay-left-right-leave-active ~ .overlay-left[data-v-4c22b934],
+.overlay-left-right-leave-active ~ .overlay-right[data-v-4c22b934] {
+  transition-timing-function: ease-out;
+}
+.overlay-left-right-enter-active[data-v-4c22b934],
+.overlay-left-right-leave-active[data-v-4c22b934] {
   transition-duration: .35s;
 }

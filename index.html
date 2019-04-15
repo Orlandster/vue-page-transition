@@ -63,7 +63,8 @@
             <b-dropdown-item to="/overlay/right-full">Right Full</b-dropdown-item>
             <b-dropdown-item to="/overlay/down-full">Down Full</b-dropdown-item>
             <b-dropdown-item to="/overlay/left-full">Left Full</b-dropdown-item>
-            <b-dropdown-item to="/overlay/up-down">Up down</b-dropdown-item>
+            <b-dropdown-item to="/overlay/up-down">Up Down</b-dropdown-item>
+            <b-dropdown-item to="/overlay/left-right">Left Right</b-dropdown-item>
           </b-nav-item-dropdown>
 
           <b-nav-item-dropdown text="Zoom" left>
@@ -345,6 +346,21 @@
         `
       })
 
+      var overlayLeftRight = Vue.component('overlay-left-right', {
+        template: `
+          <div>
+            <h1>Overlay Left Right</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+            <hr>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+        `
+      })
+
       var router = new VueRouter({
         routes: [
           {
@@ -454,6 +470,12 @@
             name: 'Overlay Up Down - Vue Page Transition',
             component: overlayUpDown,
             meta: { transition: 'overlay-up-down' },
+          },
+          {
+            path: '/overlay/left-right',
+            name: 'Overlay Left Right - Vue Page Transition',
+            component: overlayLeftRight,
+            meta: { transition: 'overlay-left-right' },
           }
         ]
       })

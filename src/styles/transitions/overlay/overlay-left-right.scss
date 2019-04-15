@@ -1,0 +1,26 @@
+.overlay-left-right-enter ~ .overlay-left,
+.overlay-left-right-enter ~ .overlay-right {
+  width: 0;
+}
+
+.overlay-left-right-leave-active ~ .overlay-left,
+.overlay-left-right-leave-to ~ .overlay-left,
+.overlay-left-right-leave-to ~ .overlay-right,
+.overlay-left-right-leave-to ~ .overlay-right {
+  width: 51vw;
+}
+
+.overlay-left-right-enter-active ~ .overlay-left,
+.overlay-left-right-enter-active ~ .overlay-right {
+  transition-timing-function: ease-in;
+}
+
+.overlay-left-right-leave-active ~ .overlay-left,
+.overlay-left-right-leave-active ~ .overlay-right {
+  transition-timing-function: ease-out;
+}
+
+.overlay-left-right-enter-active,
+.overlay-left-right-leave-active {
+  transition-duration: .35s;
+}
