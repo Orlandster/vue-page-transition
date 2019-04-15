@@ -272,6 +272,36 @@ to {
 .overlay-up-full-leave-active[data-v-4c22b934] {
   transition-duration: .35s;
 }
+.overlay-right-full-enter ~ .overlay-left[data-v-4c22b934] {
+  width: 100vw;
+}
+.overlay-right-full-enter-active ~ .overlay-left[data-v-4c22b934],
+.overlay-right-full-leave-active ~ .overlay-left[data-v-4c22b934] {
+  width: 100vw;
+}
+.overlay-right-full-enter-active ~ .overlay-left[data-v-4c22b934] {
+  transition-timing-function: ease-in;
+}
+.overlay-right-full-enter-active ~ .overlay-left[data-v-4c22b934],
+.overlay-right-full-enter-to ~ .overlay-left[data-v-4c22b934] {
+  display: none;
+}
+.overlay-right-full-enter-to ~ .overlay-right[data-v-4c22b934] {
+  width: 0;
+}
+.overlay-right-full-leave-active ~ .overlay-right[data-v-4c22b934] {
+  transition-timing-function: ease;
+}
+.overlay-right-full-enter ~ .overlay-right[data-v-4c22b934],
+.overlay-right-full-enter-active ~ .overlay-right[data-v-4c22b934],
+.overlay-right-full-enter-to ~ .overlay-right[data-v-4c22b934] {
+  transition-duration: unset !important;
+  width: 100vw;
+}
+.overlay-right-full-enter-active[data-v-4c22b934],
+.overlay-right-full-leave-active[data-v-4c22b934] {
+  transition-duration: .35s;
+}
 .overlay-down-full-enter ~ .overlay-top[data-v-4c22b934] {
   height: 100vh;
 }

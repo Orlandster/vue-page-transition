@@ -1,0 +1,37 @@
+.overlay-right-full-enter ~ .overlay-left {
+    width: 100vw;
+  }
+  
+  .overlay-right-full-enter-active ~ .overlay-left,
+  .overlay-right-full-leave-active ~ .overlay-left {
+    width: 100vw;
+  }
+  
+  .overlay-right-full-enter-active ~ .overlay-left {
+    transition-timing-function: ease-in;
+  }
+  
+  .overlay-right-full-enter-active ~ .overlay-left,
+  .overlay-right-full-enter-to ~ .overlay-left {
+    display: none;
+  }
+  
+  .overlay-right-full-enter-to ~ .overlay-right {
+    width: 0;
+  }
+  
+  .overlay-right-full-leave-active ~ .overlay-right {
+    transition-timing-function: ease;
+  }
+  
+  .overlay-right-full-enter ~ .overlay-right,
+  .overlay-right-full-enter-active ~ .overlay-right,
+  .overlay-right-full-enter-to ~ .overlay-right {
+    transition-duration: unset !important;
+    width: 100vw;
+  }
+  
+  .overlay-right-full-enter-active,
+  .overlay-right-full-leave-active {
+    transition-duration: .35s;
+  }
