@@ -1,0 +1,32 @@
+.overlay-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 100vw;
+  background: black;
+  transition-duration: .45s;
+}
+
+.overlay-up-enter ~ .overlay-bottom,
+.overlay-up-leave-to ~ .overlay-bottom {
+  height: 0;
+}
+
+.overlay-up-enter-active ~ .overlay-bottom,
+.overlay-up-leave-active ~ .overlay-bottom {
+  height: 100vh;
+}
+
+.overlay-up-enter-active ~ .overlay-bottom {
+  transition-timing-function: ease-in;
+}
+
+.overlay-up-leave-active ~ .overlay-bottom {
+  transition-timing-function: ease-out;
+}
+
+.overlay-up-enter-active,
+.overlay-up-leave-active {
+  transition-duration: .35s;
+}
