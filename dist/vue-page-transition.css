@@ -242,21 +242,31 @@ to {
 .overlay-left-leave-active[data-v-4c22b934] {
   transition-duration: .35s;
 }
-.overlay-up-full-enter ~ .overlay-top[data-v-4c22b934],
-.overlay-up-full-leave-to ~ .overlay-top[data-v-4c22b934] {
-  height: 0;
-}
-.overlay-up-full-enter-active ~ .overlay-top[data-v-4c22b934],
-.overlay-up-full-leave-active ~ .overlay-top[data-v-4c22b934] {
+.overlay-up-full-enter ~ .overlay-bottom[data-v-4c22b934] {
   height: 100vh;
 }
-.overlay-up-full-enter-active ~ .overlay-top[data-v-4c22b934] {
+.overlay-up-full-enter-active ~ .overlay-bottom[data-v-4c22b934],
+.overlay-up-full-leave-active ~ .overlay-bottom[data-v-4c22b934] {
+  height: 100vh;
+}
+.overlay-up-full-enter-active ~ .overlay-bottom[data-v-4c22b934] {
   transition-timing-function: ease-in;
 }
+.overlay-up-full-enter-active ~ .overlay-bottom[data-v-4c22b934],
+.overlay-up-full-enter-to ~ .overlay-bottom[data-v-4c22b934] {
+  display: none;
+}
+.overlay-up-full-enter-to ~ .overlay-top[data-v-4c22b934] {
+  height: 0;
+}
 .overlay-up-full-leave-active ~ .overlay-top[data-v-4c22b934] {
-  top: auto;
-  bottom: 0;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease;
+}
+.overlay-up-full-enter ~ .overlay-top[data-v-4c22b934],
+.overlay-up-full-enter-active ~ .overlay-top[data-v-4c22b934],
+.overlay-up-full-enter-to ~ .overlay-top[data-v-4c22b934] {
+  transition-duration: unset !important;
+  height: 100vh;
 }
 .overlay-up-full-enter-active[data-v-4c22b934],
 .overlay-up-full-leave-active[data-v-4c22b934] {

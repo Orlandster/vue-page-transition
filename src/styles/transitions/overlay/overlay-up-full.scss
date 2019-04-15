@@ -1,21 +1,34 @@
-.overlay-up-full-enter ~ .overlay-top,
-.overlay-up-full-leave-to ~ .overlay-top {
-  height: 0;
-}
-
-.overlay-up-full-enter-active ~ .overlay-top,
-.overlay-up-full-leave-active ~ .overlay-top {
+.overlay-up-full-enter ~ .overlay-bottom {
   height: 100vh;
 }
 
-.overlay-up-full-enter-active ~ .overlay-top {
+.overlay-up-full-enter-active ~ .overlay-bottom,
+.overlay-up-full-leave-active ~ .overlay-bottom {
+  height: 100vh;
+}
+
+.overlay-up-full-enter-active ~ .overlay-bottom {
   transition-timing-function: ease-in;
 }
 
+.overlay-up-full-enter-active ~ .overlay-bottom,
+.overlay-up-full-enter-to ~ .overlay-bottom {
+  display: none;
+}
+
+.overlay-up-full-enter-to ~ .overlay-top {
+  height: 0;
+}
+
 .overlay-up-full-leave-active ~ .overlay-top {
-  top: auto;
-  bottom: 0;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease;
+}
+
+.overlay-up-full-enter ~ .overlay-top,
+.overlay-up-full-enter-active ~ .overlay-top,
+.overlay-up-full-enter-to ~ .overlay-top {
+  transition-duration: unset !important;
+  height: 100vh;
 }
 
 .overlay-up-full-enter-active,
