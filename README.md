@@ -109,6 +109,9 @@ Here you can find a list of all the available transitions so far.
   - [right](#right)
   - [down](#down)
   - [left](#left)
+- [Flip](#flip)
+  - [x](#flip-x)
+  - [y](#flip-y)
 - [Zoom](#zoom)
   - [default](#default-zoom)
 
@@ -153,6 +156,23 @@ The old page smoothly disappears, while the new page fades in from left.
 **Usage:**
 ```html
 <vue-page-transition name="fade-in-left">...</vue-page-transition>
+```
+
+## Flip
+### Flip X
+The old page flips horizontally into the new page.
+
+**Usage:**
+```html
+<vue-page-transition name="flip-x">...</vue-page-transition>
+```
+
+### Flip Y
+The old page flips vertically into the new page.
+
+**Usage:**
+```html
+<vue-page-transition name="flip-y">...</vue-page-transition>
 ```
 
 ## Zoom
