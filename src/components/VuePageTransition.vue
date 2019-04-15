@@ -59,5 +59,6 @@ export default {
 @import '../styles/transitions/overlay/overlay-right-full';
 @import '../styles/transitions/overlay/overlay-down-full';
 @import '../styles/transitions/overlay/overlay-left-full';
+@import '../styles/transitions/overlay/overlay-up-down';
 </style>
 

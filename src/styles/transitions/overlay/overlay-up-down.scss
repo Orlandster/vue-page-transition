@@ -1,0 +1,26 @@
+.overlay-up-down-enter ~ .overlay-bottom,
+.overlay-up-down-enter ~ .overlay-top {
+  height: 0;
+}
+
+.overlay-up-down-leave-active ~ .overlay-bottom,
+.overlay-up-down-leave-to ~ .overlay-bottom,
+.overlay-up-down-leave-to ~ .overlay-top,
+.overlay-up-down-leave-to ~ .overlay-top {
+  height: 50vh;
+}
+
+.overlay-up-down-enter-active ~ .overlay-bottom,
+.overlay-up-down-enter-active ~ .overlay-top {
+  transition-timing-function: ease-in;
+}
+
+.overlay-up-down-leave-active ~ .overlay-bottom,
+.overlay-up-down-leave-active ~ .overlay-top {
+  transition-timing-function: ease-out;
+}
+
+.overlay-up-down-enter-active,
+.overlay-up-down-leave-active {
+  transition-duration: .35s;
+}

@@ -362,3 +362,25 @@ to {
 .overlay-left-full-leave-active[data-v-4c22b934] {
   transition-duration: .35s;
 }
+.overlay-up-down-enter ~ .overlay-bottom[data-v-4c22b934],
+.overlay-up-down-enter ~ .overlay-top[data-v-4c22b934] {
+  height: 0;
+}
+.overlay-up-down-leave-active ~ .overlay-bottom[data-v-4c22b934],
+.overlay-up-down-leave-to ~ .overlay-bottom[data-v-4c22b934],
+.overlay-up-down-leave-to ~ .overlay-top[data-v-4c22b934],
+.overlay-up-down-leave-to ~ .overlay-top[data-v-4c22b934] {
+  height: 50vh;
+}
+.overlay-up-down-enter-active ~ .overlay-bottom[data-v-4c22b934],
+.overlay-up-down-enter-active ~ .overlay-top[data-v-4c22b934] {
+  transition-timing-function: ease-in;
+}
+.overlay-up-down-leave-active ~ .overlay-bottom[data-v-4c22b934],
+.overlay-up-down-leave-active ~ .overlay-top[data-v-4c22b934] {
+  transition-timing-function: ease-out;
+}
+.overlay-up-down-enter-active[data-v-4c22b934],
+.overlay-up-down-leave-active[data-v-4c22b934] {
+  transition-duration: .35s;
+}

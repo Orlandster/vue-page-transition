@@ -63,6 +63,7 @@
             <b-dropdown-item to="/overlay/right-full">Right Full</b-dropdown-item>
             <b-dropdown-item to="/overlay/down-full">Down Full</b-dropdown-item>
             <b-dropdown-item to="/overlay/left-full">Left Full</b-dropdown-item>
+            <b-dropdown-item to="/overlay/up-down">Up down</b-dropdown-item>
           </b-nav-item-dropdown>
 
           <b-nav-item-dropdown text="Zoom" left>
@@ -329,6 +330,21 @@
         `
       })
 
+      var overlayUpDown = Vue.component('overlay-up-down', {
+        template: `
+          <div>
+            <h1>Overlay Up Down</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+            <hr>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+          </div>
+        `
+      })
+
       var router = new VueRouter({
         routes: [
           {
@@ -432,6 +448,12 @@
             name: 'Overlay Left Full - Vue Page Transition',
             component: overlayLeftFull,
             meta: { transition: 'overlay-left-full' },
+          },
+          {
+            path: '/overlay/up-down',
+            name: 'Overlay Up Down - Vue Page Transition',
+            component: overlayUpDown,
+            meta: { transition: 'overlay-up-down' },
           }
         ]
       })
