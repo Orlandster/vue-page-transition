@@ -1,0 +1,32 @@
+.overlay-left {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 0;
+  background: black;
+  transition-duration: .35s;
+}
+
+.overlay-left-enter ~ .overlay-left,
+.overlay-left-leave-to ~ .overlay-left {
+  width: 0;
+}
+
+.overlay-left-enter-active ~ .overlay-left,
+.overlay-left-leave-active ~ .overlay-left {
+  width: 100vw;
+}
+
+.overlay-left-enter-active ~ .overlay-left {
+  transition-timing-function: ease-in;
+}
+
+.overlay-left-leave-active ~ .overlay-left {
+  transition-timing-function: ease-out;
+}
+
+.overlay-left-enter-active,
+.overlay-left-leave-active {
+  transition-duration: .35s;
+}
