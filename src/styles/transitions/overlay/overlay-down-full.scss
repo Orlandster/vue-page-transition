@@ -1,5 +1,8 @@
-.overlay-down-full-enter ~ .overlay-top,
-.overlay-down-full-leave-to ~ .overlay-top {
+.overlay-down-full-enter ~ .overlay-top {
+  height: 100vh;
+}
+
+.overlay-down-full-enter-to ~ .overlay-bottom {
   height: 0;
 }
 
@@ -12,13 +15,22 @@
   transition-timing-function: ease-in;
 }
 
-.overlay-down-full-leave-active ~ .overlay-top {
-  bottom: auto;
-  top: 0;
-  transition-timing-function: ease-out;
+.overlay-down-full-leave-active ~ .overlay-bottom {
+  transition-timing-function: ease;
 }
 
 .overlay-down-full-enter-active,
 .overlay-down-full-leave-active {
   transition-duration: .35s;
+}
+.overlay-down-full-enter-active ~ .overlay-top,
+.overlay-down-full-enter-to ~ .overlay-top {
+  display: none;
+}
+
+.overlay-down-full-enter ~ .overlay-bottom,
+.overlay-down-full-enter-active ~ .overlay-bottom,
+.overlay-down-full-enter-to ~ .overlay-bottom {
+  transition-duration: unset !important;
+  height: 100vh;
 }

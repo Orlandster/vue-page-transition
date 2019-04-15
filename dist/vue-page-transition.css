@@ -195,7 +195,7 @@ to {
   height: 0;
   width: 100vw;
   background: black;
-  transition-duration: .45s;
+  transition-duration: .35s;
 }
 .overlay-up-enter ~ .overlay-bottom[data-v-4c22b934],
 .overlay-up-leave-to ~ .overlay-bottom[data-v-4c22b934] {
@@ -242,26 +242,30 @@ to {
 .overlay-left-leave-active[data-v-4c22b934] {
   transition-duration: .35s;
 }
-.overlay-up-full-enter ~ .overlay-bottom[data-v-4c22b934],
-.overlay-up-full-leave-to ~ .overlay-bottom[data-v-4c22b934] {
+.overlay-up-full-enter ~ .overlay-top[data-v-4c22b934],
+.overlay-up-full-leave-to ~ .overlay-top[data-v-4c22b934] {
   height: 0;
 }
-.overlay-up-full-enter-active ~ .overlay-bottom[data-v-4c22b934],
-.overlay-up-full-leave-active ~ .overlay-bottom[data-v-4c22b934] {
+.overlay-up-full-enter-active ~ .overlay-top[data-v-4c22b934],
+.overlay-up-full-leave-active ~ .overlay-top[data-v-4c22b934] {
   height: 100vh;
 }
-.overlay-up-full-enter-active ~ .overlay-bottom[data-v-4c22b934] {
+.overlay-up-full-enter-active ~ .overlay-top[data-v-4c22b934] {
   transition-timing-function: ease-in;
 }
-.overlay-up-full-leave-active ~ .overlay-bottom[data-v-4c22b934] {
+.overlay-up-full-leave-active ~ .overlay-top[data-v-4c22b934] {
+  top: auto;
+  bottom: 0;
   transition-timing-function: ease-out;
 }
 .overlay-up-full-enter-active[data-v-4c22b934],
 .overlay-up-full-leave-active[data-v-4c22b934] {
   transition-duration: .35s;
 }
-.overlay-down-full-enter ~ .overlay-top[data-v-4c22b934],
-.overlay-down-full-leave-to ~ .overlay-top[data-v-4c22b934] {
+.overlay-down-full-enter ~ .overlay-top[data-v-4c22b934] {
+  height: 100vh;
+}
+.overlay-down-full-enter-to ~ .overlay-bottom[data-v-4c22b934] {
   height: 0;
 }
 .overlay-down-full-enter-active ~ .overlay-top[data-v-4c22b934],
@@ -271,12 +275,20 @@ to {
 .overlay-down-full-enter-active ~ .overlay-top[data-v-4c22b934] {
   transition-timing-function: ease-in;
 }
-.overlay-down-full-leave-active ~ .overlay-top[data-v-4c22b934] {
-  bottom: auto;
-  top: 0;
-  transition-timing-function: ease-out;
+.overlay-down-full-leave-active ~ .overlay-bottom[data-v-4c22b934] {
+  transition-timing-function: ease;
 }
 .overlay-down-full-enter-active[data-v-4c22b934],
 .overlay-down-full-leave-active[data-v-4c22b934] {
   transition-duration: .35s;
+}
+.overlay-down-full-enter-active ~ .overlay-top[data-v-4c22b934],
+.overlay-down-full-enter-to ~ .overlay-top[data-v-4c22b934] {
+  display: none;
+}
+.overlay-down-full-enter ~ .overlay-bottom[data-v-4c22b934],
+.overlay-down-full-enter-active ~ .overlay-bottom[data-v-4c22b934],
+.overlay-down-full-enter-to ~ .overlay-bottom[data-v-4c22b934] {
+  transition-duration: unset !important;
+  height: 100vh;
 }
