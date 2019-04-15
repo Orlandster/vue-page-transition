@@ -332,3 +332,33 @@ to {
   transition-duration: unset !important;
   height: 100vh;
 }
+.overlay-left-full-enter ~ .overlay-right[data-v-4c22b934] {
+  width: 100vw;
+}
+.overlay-left-full-enter-active ~ .overlay-right[data-v-4c22b934],
+.overlay-left-full-leave-active ~ .overlay-right[data-v-4c22b934] {
+  width: 100vw;
+}
+.overlay-left-full-enter-active ~ .overlay-right[data-v-4c22b934] {
+  transition-timing-function: ease-in;
+}
+.overlay-left-full-enter-active ~ .overlay-right[data-v-4c22b934],
+.overlay-left-full-enter-to ~ .overlay-right[data-v-4c22b934] {
+  display: none;
+}
+.overlay-left-full-enter-to ~ .overlay-left[data-v-4c22b934] {
+  width: 0;
+}
+.overlay-left-full-leave-active ~ .overlay-left[data-v-4c22b934] {
+  transition-timing-function: ease;
+}
+.overlay-left-full-enter ~ .overlay-left[data-v-4c22b934],
+.overlay-left-full-enter-active ~ .overlay-left[data-v-4c22b934],
+.overlay-left-full-enter-to ~ .overlay-left[data-v-4c22b934] {
+  transition-duration: unset !important;
+  width: 100vw;
+}
+.overlay-left-full-enter-active[data-v-4c22b934],
+.overlay-left-full-leave-active[data-v-4c22b934] {
+  transition-duration: .35s;
+}

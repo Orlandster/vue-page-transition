@@ -1,0 +1,37 @@
+.overlay-left-full-enter ~ .overlay-right {
+  width: 100vw;
+}
+
+.overlay-left-full-enter-active ~ .overlay-right,
+.overlay-left-full-leave-active ~ .overlay-right {
+  width: 100vw;
+}
+
+.overlay-left-full-enter-active ~ .overlay-right {
+  transition-timing-function: ease-in;
+}
+
+.overlay-left-full-enter-active ~ .overlay-right,
+.overlay-left-full-enter-to ~ .overlay-right {
+  display: none;
+}
+
+.overlay-left-full-enter-to ~ .overlay-left {
+  width: 0;
+}
+
+.overlay-left-full-leave-active ~ .overlay-left {
+  transition-timing-function: ease;
+}
+
+.overlay-left-full-enter ~ .overlay-left,
+.overlay-left-full-enter-active ~ .overlay-left,
+.overlay-left-full-enter-to ~ .overlay-left {
+  transition-duration: unset !important;
+  width: 100vw;
+}
+
+.overlay-left-full-enter-active,
+.overlay-left-full-leave-active {
+  transition-duration: .35s;
+}
