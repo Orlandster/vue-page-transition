@@ -103,17 +103,39 @@ export default new Router({
 # Transitions
 Here you can find a list of all the available transitions so far.
 
-- [Fade](#fade)
-  - [default](#default-fade)
-  - [up](#up)
-  - [right](#right)
-  - [down](#down)
-  - [left](#left)
-- [Flip](#flip)
-  - [x](#flip-x)
-  - [y](#flip-y)
-- [Zoom](#zoom)
-  - [default](#default-zoom)
+- [vue-page-transition](#vue-page-transition)
+  - [Table of contents](#table-of-contents)
+- [Installation](#installation)
+  - [Default import](#default-import)
+  - [Browser import](#browser-import)
+- [Usage](#usage)
+  - [Properties / Attributes](#properties--attributes)
+  - [Overwrite transiton for single route](#overwrite-transiton-for-single-route)
+- [Transitions](#transitions)
+  - [Fade](#fade)
+    - [Default Fade](#default-fade)
+    - [Up](#up)
+    - [Right](#right)
+    - [Down](#down)
+    - [Left](#left)
+  - [Overlay](#overlay)
+    - [Overlay Up](#overlay-up)
+    - [Overlay Right](#overlay-right)
+    - [Overlay Down](#overlay-down)
+    - [Overlay Right](#overlay-right-1)
+    - [Overlay Down Full](#overlay-down-full)
+    - [Overlay Left Full](#overlay-left-full)
+    - [Overlay Up Full](#overlay-up-full)
+    - [Overlay Right Full](#overlay-right-full)
+    - [Overlay Up Down](#overlay-up-down)
+    - [Overlay Left Right](#overlay-left-right)
+  - [Flip](#flip)
+    - [Flip X](#flip-x)
+    - [Flip Y](#flip-y)
+  - [Zoom](#zoom)
+    - [Default Zoom](#default-zoom)
+- [Demo](#demo)
+- [License](#license)
 
 ## Fade
 The default fade transtion smoothly changes the opacity between two elements / pages with the additional ability to add some direction.
@@ -156,6 +178,87 @@ The old page smoothly disappears, while the new page fades in from left.
 **Usage:**
 ```html
 <vue-page-transition name="fade-in-left">...</vue-page-transition>
+```
+
+## Overlay
+### Overlay Up
+The overlay grows from the bottom to the top and back.
+
+**Usage:**
+```html
+<vue-page-transition name="overlay-up">...</vue-page-transition>
+```
+
+### Overlay Right
+The overlay grows from the left to the right and back.
+
+**Usage:**
+```html
+<vue-page-transition name="overlay-right">...</vue-page-transition>
+```
+
+### Overlay Down
+The overlay grows from the top to the bottom and back.
+
+**Usage:**
+```html
+<vue-page-transition name="overlay-down">...</vue-page-transition>
+```
+
+### Overlay Right
+The overlay grows from the left to the right and back.
+
+**Usage:**
+```html
+<vue-page-transition name="overlay-right">...</vue-page-transition>
+```
+
+### Overlay Down Full
+The overlay grows from the top to the bottom and then shrinks from top to the bottom.
+
+**Usage:**
+```html
+<vue-page-transition name="overlay-down-full">...</vue-page-transition>
+```
+
+### Overlay Left Full
+The overlay grows from the left to the right and then shrinks from left to the right.
+
+**Usage:**
+```html
+<vue-page-transition name="overlay-right-full">...</vue-page-transition>
+```
+
+### Overlay Up Full
+The overlay grows from the bottom to the top and then shrinks from bottom to the top.
+
+**Usage:**
+```html
+<vue-page-transition name="overlay-up-full">...</vue-page-transition>
+```
+
+### Overlay Right Full
+The overlay grows from the left to the right and then shrinks from left to the right.
+
+**Usage:**
+```html
+<vue-page-transition name="overlay-left-full">...</vue-page-transition>
+```
+
+### Overlay Up Down
+The overlay grows from the bottom and top at the same time and back.
+
+**Usage:**
+```html
+<vue-page-transition name="overlay-up-down">...</vue-page-transition>
+```
+
+### Overlay Left Right
+The overlay grows from the left and right at the same time and back.
+
+**Usage:**
+```html
+<vue-page-transition name="overlay-left-right">...</vue-page-transition>
 ```
 
 ## Flip
