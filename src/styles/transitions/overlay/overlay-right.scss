@@ -4,8 +4,8 @@
   left: 0;
   height: 100vh;
   width: 0;
-  background: black;
-  transition-duration: .35s;
+  background: var(--overlay-bg);
+  transition-duration: var(--transition-duration);
 }
 
 .overlay-right-enter ~ .overlay-right,
@@ -28,5 +28,5 @@
 
 .overlay-right-enter-active,
 .overlay-right-leave-active {
-  transition-duration: .35s;
+  transition-duration: var(--transition-duration);
 }

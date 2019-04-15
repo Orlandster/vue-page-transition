@@ -35,6 +35,13 @@ export default {
 }
 </script>
 
+<style>
+  :root {
+    --overlay-bg: #1867c0;
+    --transition-duration: .35s;
+  }
+</style>
+
 <style lang="scss" scoped>
 // fade
 @import '../styles/transitions/fade/fade';

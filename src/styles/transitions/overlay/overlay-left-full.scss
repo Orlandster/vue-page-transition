@@ -33,5 +33,5 @@
 
 .overlay-left-full-enter-active,
 .overlay-left-full-leave-active {
-  transition-duration: .35s;
+  transition-duration: var(--transition-duration);
 }

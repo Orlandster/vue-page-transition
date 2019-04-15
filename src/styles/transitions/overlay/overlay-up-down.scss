@@ -12,15 +12,15 @@
 
 .overlay-up-down-enter-active ~ .overlay-bottom,
 .overlay-up-down-enter-active ~ .overlay-top {
-  transition-timing-function: ease-in;
+  transition-timing-function: ease;
 }
 
 .overlay-up-down-leave-active ~ .overlay-bottom,
 .overlay-up-down-leave-active ~ .overlay-top {
-  transition-timing-function: ease-out;
+  transition-timing-function: ease;
 }
 
 .overlay-up-down-enter-active,
 .overlay-up-down-leave-active {
-  transition-duration: .35s;
+  transition-duration: var(--transition-duration);
 }

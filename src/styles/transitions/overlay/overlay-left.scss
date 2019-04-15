@@ -4,7 +4,7 @@
   right: 0;
   height: 100vh;
   width: 0;
-  background: black;
+  background: var(--overlay-bg);
   transition-duration: .35s;
 }
 

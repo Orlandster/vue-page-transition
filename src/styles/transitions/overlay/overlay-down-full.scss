@@ -21,7 +21,7 @@
 
 .overlay-down-full-enter-active,
 .overlay-down-full-leave-active {
-  transition-duration: .35s;
+  transition-duration: var(--transition-duration);
 }
 .overlay-down-full-enter-active ~ .overlay-top,
 .overlay-down-full-enter-to ~ .overlay-top {

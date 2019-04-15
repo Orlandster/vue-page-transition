@@ -1,4 +1,9 @@
 
+:root {
+  --overlay-bg: #1867c0;
+  --transition-duration: .35s;
+}
+
 .fade-enter-active[data-v-4c22b934],
 .fade-leave-active[data-v-4c22b934] {
   transition-duration: 0.3s;
@@ -140,8 +145,8 @@ to {
   left: 0;
   height: 100vh;
   width: 0;
-  background: black;
-  transition-duration: .35s;
+  background: var(--overlay-bg);
+  transition-duration: var(--transition-duration);
 }
 .overlay-right-enter ~ .overlay-right[data-v-4c22b934],
 .overlay-right-leave-to ~ .overlay-right[data-v-4c22b934] {
@@ -159,7 +164,7 @@ to {
 }
 .overlay-right-enter-active[data-v-4c22b934],
 .overlay-right-leave-active[data-v-4c22b934] {
-  transition-duration: .35s;
+  transition-duration: var(--transition-duration);
 }
 .overlay-top[data-v-4c22b934] {
   position: fixed;
@@ -167,8 +172,8 @@ to {
   left: 0;
   height: 0;
   width: 100vw;
-  background: black;
-  transition-duration: .35s;
+  background: var(--overlay-bg);
+  transition-duration: var(--transition-duration);
 }
 .overlay-down-enter ~ .overlay-top[data-v-4c22b934],
 .overlay-down-leave-to ~ .overlay-top[data-v-4c22b934] {
@@ -186,7 +191,7 @@ to {
 }
 .overlay-down-enter-active[data-v-4c22b934],
 .overlay-down-leave-active[data-v-4c22b934] {
-  transition-duration: .35s;
+  transition-duration: var(--transition-duration);
 }
 .overlay-bottom[data-v-4c22b934] {
   position: fixed;
@@ -194,8 +199,8 @@ to {
   left: 0;
   height: 0;
   width: 100vw;
-  background: black;
-  transition-duration: .35s;
+  background: var(--overlay-bg);
+  transition-duration: var(--transition-duration);
 }
 .overlay-up-enter ~ .overlay-bottom[data-v-4c22b934],
 .overlay-up-leave-to ~ .overlay-bottom[data-v-4c22b934] {
@@ -213,7 +218,7 @@ to {
 }
 .overlay-up-enter-active[data-v-4c22b934],
 .overlay-up-leave-active[data-v-4c22b934] {
-  transition-duration: .35s;
+  transition-duration: var(--transition-duration);
 }
 .overlay-left[data-v-4c22b934] {
   position: fixed;
@@ -221,7 +226,7 @@ to {
   right: 0;
   height: 100vh;
   width: 0;
-  background: black;
+  background: var(--overlay-bg);
   transition-duration: .35s;
 }
 .overlay-left-enter ~ .overlay-left[data-v-4c22b934],
@@ -270,7 +275,7 @@ to {
 }
 .overlay-up-full-enter-active[data-v-4c22b934],
 .overlay-up-full-leave-active[data-v-4c22b934] {
-  transition-duration: .35s;
+  transition-duration: var(--transition-duration);
 }
 .overlay-right-full-enter ~ .overlay-left[data-v-4c22b934] {
   width: 100vw;
@@ -300,7 +305,7 @@ to {
 }
 .overlay-right-full-enter-active[data-v-4c22b934],
 .overlay-right-full-leave-active[data-v-4c22b934] {
-  transition-duration: .35s;
+  transition-duration: var(--transition-duration);
 }
 .overlay-down-full-enter ~ .overlay-top[data-v-4c22b934] {
   height: 100vh;
@@ -320,7 +325,7 @@ to {
 }
 .overlay-down-full-enter-active[data-v-4c22b934],
 .overlay-down-full-leave-active[data-v-4c22b934] {
-  transition-duration: .35s;
+  transition-duration: var(--transition-duration);
 }
 .overlay-down-full-enter-active ~ .overlay-top[data-v-4c22b934],
 .overlay-down-full-enter-to ~ .overlay-top[data-v-4c22b934] {
@@ -360,7 +365,7 @@ to {
 }
 .overlay-left-full-enter-active[data-v-4c22b934],
 .overlay-left-full-leave-active[data-v-4c22b934] {
-  transition-duration: .35s;
+  transition-duration: var(--transition-duration);
 }
 .overlay-up-down-enter ~ .overlay-bottom[data-v-4c22b934],
 .overlay-up-down-enter ~ .overlay-top[data-v-4c22b934] {
@@ -374,15 +379,15 @@ to {
 }
 .overlay-up-down-enter-active ~ .overlay-bottom[data-v-4c22b934],
 .overlay-up-down-enter-active ~ .overlay-top[data-v-4c22b934] {
-  transition-timing-function: ease-in;
+  transition-timing-function: ease;
 }
 .overlay-up-down-leave-active ~ .overlay-bottom[data-v-4c22b934],
 .overlay-up-down-leave-active ~ .overlay-top[data-v-4c22b934] {
-  transition-timing-function: ease-out;
+  transition-timing-function: ease;
 }
 .overlay-up-down-enter-active[data-v-4c22b934],
 .overlay-up-down-leave-active[data-v-4c22b934] {
-  transition-duration: .35s;
+  transition-duration: var(--transition-duration);
 }
 .overlay-left-right-enter ~ .overlay-left[data-v-4c22b934],
 .overlay-left-right-enter ~ .overlay-right[data-v-4c22b934] {
@@ -396,13 +401,13 @@ to {
 }
 .overlay-left-right-enter-active ~ .overlay-left[data-v-4c22b934],
 .overlay-left-right-enter-active ~ .overlay-right[data-v-4c22b934] {
-  transition-timing-function: ease-in;
+  transition-timing-function: ease;
 }
 .overlay-left-right-leave-active ~ .overlay-left[data-v-4c22b934],
 .overlay-left-right-leave-active ~ .overlay-right[data-v-4c22b934] {
-  transition-timing-function: ease-out;
+  transition-timing-function: ease;
 }
 .overlay-left-right-enter-active[data-v-4c22b934],
 .overlay-left-right-leave-active[data-v-4c22b934] {
-  transition-duration: .35s;
+  transition-duration: var(--transition-duration);
 }
