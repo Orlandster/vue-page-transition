@@ -179,6 +179,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'vue-page-transition',
@@ -262,12 +268,20 @@ module.exports = function normalizeComponent (
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('transition', {
+  return _c('div', [_c('transition', {
     attrs: {
       "name": _vm.transition,
       "mode": _vm.mode
     }
-  }, [_vm._t("default")], 2)
+  }, [_vm._t("default")], 2), _vm._v(" "), _c('div', {
+    staticClass: "overlay-top"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "overlay-right"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "overlay-bottom"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "overlay-left"
+  })], 1)
 },staticRenderFns: []}
 
 /***/ })

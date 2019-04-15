@@ -50,10 +50,12 @@ export default {
 @import '../styles/transitions/flip/flip-x';
 @import '../styles/transitions/flip/flip-y';
 
-// splash
-@import '../styles/transitions/splash/splash-down';
-@import '../styles/transitions/splash/splash-right';
-@import '../styles/transitions/splash/splash-up';
-@import '../styles/transitions/splash/splash-left';
+// overlay
+@import '../styles/transitions/overlay/overlay-right';
+@import '../styles/transitions/overlay/overlay-down';
+@import '../styles/transitions/overlay/overlay-up';
+@import '../styles/transitions/overlay/overlay-left';
+@import '../styles/transitions/overlay/overlay-up-full';
+@import '../styles/transitions/overlay/overlay-down-full';
 </style>
 

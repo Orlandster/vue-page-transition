@@ -1,0 +1,22 @@
+.overlay-up-full-enter ~ .overlay-bottom,
+.overlay-up-full-leave-to ~ .overlay-bottom {
+  height: 0;
+}
+
+.overlay-up-full-enter-active ~ .overlay-bottom,
+.overlay-up-full-leave-active ~ .overlay-bottom {
+  height: 100vh;
+}
+
+.overlay-up-full-enter-active ~ .overlay-bottom {
+  transition-timing-function: ease-in;
+}
+
+.overlay-up-full-leave-active ~ .overlay-bottom {
+  transition-timing-function: ease-out;
+}
+
+.overlay-up-full-enter-active,
+.overlay-up-full-leave-active {
+  transition-duration: .35s;
+}
