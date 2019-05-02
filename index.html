@@ -26,12 +26,23 @@
       href="dist/vue-page-transition.css"
     />
 
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+
     <!-- Required scripts -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
     <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.3/vue-router.min.js"></script>
     <script src="dist/vue-page-transition.browser.js"></script>
+    <style>
+      .body,
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: 'Source Sans Pro', sans-serif;
+      }
+    </style>
   </head>
   <body>
     <!-- Our application root element -->
@@ -82,10 +93,11 @@
     <script>
       var home = Vue.component('home', {
         template: `
-          <div>
-            <h1>Vue Page Transition</h1>
+          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: calc(100vh - 104px);">
+            <img src="vue.png" style="width: 250px; margin-bottom: 20px;" />
+            <h1 style="margin-bottom: 10px; font-size: 45px;">Vue Page Transition</h1>
             <p>
-              A simple Vue.js plugin for page / route transitions.
+              A simple and lightweight Plugin to add wonderful page / router transitions to your project.
             </p>
           </div>
         `
@@ -95,13 +107,19 @@
         template: `
           <div>
             <h1>Default Fade</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-            <hr>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            <div id="codebox">
+     <pre><code data-language="css">.somecssclass {
+      padding: 15px;
+      font-family: Courier, sans-serif;
+      font-size: 12px;
+      color: #fff;
+      background-color: #3d3d3d;
+      margin-bottom: 10px;
+      -webkit-border-radius: 0px 0px 6px 6px;
+      -moz-border-radius: 0px 0px 6px 6px;
+      border-radius: 0px 0px 6px 6px;
+  }</code></pre>
+  </div>
           </div>
         `
       })
