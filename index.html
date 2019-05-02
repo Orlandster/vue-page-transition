@@ -294,12 +294,12 @@
         template: `
           <div>
             <h1>Default Zoom</h1>
-            <p style="margin-bottom: 25px;">The old page smoothly disappears, while the new page fades in from left.</p>
+            <p style="margin-bottom: 25px;">The old page smoothly zooms out and then new page zooms in.</p>
             <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Global Usage</h2>
             <p style="margin-bottom: 15px;">You can use transitions globally by defining the name property</p>
             <div id="codebox" style="margin-bottom: 30px;">
               <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
-                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">&lt;vue-page-transition name="fade-in-left"&gt;
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">&lt;vue-page-transition name="zoom"&gt;
   &lt;router-view /&gt;
 &lt;/vue-page-transition&gt;</code>
               </pre>
@@ -315,7 +315,7 @@
       name: 'HelloWorld',
       component: HelloWorld,
       // overwrite default transition
-      meta: { transition: 'fade-in-left' },
+      meta: { transition: 'zoom' },
     },
   ]
 })</code>
@@ -329,13 +329,33 @@
         template: `
           <div>
             <h1>Flip X</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-            <hr>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            <p style="margin-bottom: 25px;">The old page flips horizontally into the new page.</p>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Global Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions globally by defining the name property</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">&lt;vue-page-transition name="flip-x"&gt;
+  &lt;router-view /&gt;
+&lt;/vue-page-transition&gt;</code>
+              </pre>
+            </div>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Local Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions locally by passing a transition's meta field to your route.</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld,
+      // overwrite default transition
+      meta: { transition: 'flip-x' },
+    },
+  ]
+})</code>
+              </pre>
+            </div>
           </div>
         `
       })
@@ -344,13 +364,33 @@
         template: `
           <div>
             <h1>Flip Y</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-            <hr>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            <p style="margin-bottom: 25px;">The old page flips vertically into the new page.</p>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Global Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions globally by defining the name property</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">&lt;vue-page-transition name="flip-y"&gt;
+  &lt;router-view /&gt;
+&lt;/vue-page-transition&gt;</code>
+              </pre>
+            </div>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Local Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions locally by passing a transition's meta field to your route.</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld,
+      // overwrite default transition
+      meta: { transition: 'flip-y' },
+    },
+  ]
+})</code>
+              </pre>
+            </div>
           </div>
         `
       })
@@ -358,14 +398,34 @@
       var overlayUp = Vue.component('overlay-up', {
         template: `
           <div>
-            <h1>Splash Down</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-            <hr>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            <h1>Overlay Up</h1>
+            <p style="margin-bottom: 25px;">The overlay grows from the bottom to the top and back.</p>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Global Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions globally by defining the name property</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">&lt;vue-page-transition name="overlay-up"&gt;
+  &lt;router-view /&gt;
+&lt;/vue-page-transition&gt;</code>
+              </pre>
+            </div>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Local Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions locally by passing a transition's meta field to your route.</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld,
+      // overwrite default transition
+      meta: { transition: 'overlay-up' },
+    },
+  ]
+})</code>
+              </pre>
+            </div>
           </div>
         `
       })
@@ -374,13 +434,33 @@
         template: `
           <div>
             <h1>Overlay Right</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-            <hr>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            <p style="margin-bottom: 25px;">The overlay grows from the left to the right and back.</p>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Global Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions globally by defining the name property</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">&lt;vue-page-transition name="overlay-right"&gt;
+  &lt;router-view /&gt;
+&lt;/vue-page-transition&gt;</code>
+              </pre>
+            </div>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Local Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions locally by passing a transition's meta field to your route.</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld,
+      // overwrite default transition
+      meta: { transition: 'overlay-right' },
+    },
+  ]
+})</code>
+              </pre>
+            </div>
           </div>
         `
       })
@@ -389,13 +469,33 @@
         template: `
           <div>
             <h1>Overlay Down</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-            <hr>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            <p style="margin-bottom: 25px;">The overlay grows from the top to the bottom and back.</p>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Global Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions globally by defining the name property</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">&lt;vue-page-transition name="overlay-down"&gt;
+  &lt;router-view /&gt;
+&lt;/vue-page-transition&gt;</code>
+              </pre>
+            </div>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Local Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions locally by passing a transition's meta field to your route.</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld,
+      // overwrite default transition
+      meta: { transition: 'overlay-down' },
+    },
+  ]
+})</code>
+              </pre>
+            </div>
           </div>
         `
       })
@@ -404,13 +504,33 @@
         template: `
           <div>
             <h1>Overlay Left</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-            <hr>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            <p style="margin-bottom: 25px;">The overlay grows from the right to the left and back.</p>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Global Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions globally by defining the name property</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">&lt;vue-page-transition name="overlay-left"&gt;
+  &lt;router-view /&gt;
+&lt;/vue-page-transition&gt;</code>
+              </pre>
+            </div>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Local Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions locally by passing a transition's meta field to your route.</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld,
+      // overwrite default transition
+      meta: { transition: 'overlay-left' },
+    },
+  ]
+})</code>
+              </pre>
+            </div>
           </div>
         `
       })
@@ -419,13 +539,33 @@
         template: `
           <div>
             <h1>Overlay Down Full</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-            <hr>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            <p style="margin-bottom: 25px;">The overlay grows from the top to the bottom and then shrinks from top to the bottom.</p>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Global Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions globally by defining the name property</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">&lt;vue-page-transition name="overlay-down-full"&gt;
+  &lt;router-view /&gt;
+&lt;/vue-page-transition&gt;</code>
+              </pre>
+            </div>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Local Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions locally by passing a transition's meta field to your route.</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld,
+      // overwrite default transition
+      meta: { transition: 'overlay-down-full' },
+    },
+  ]
+})</code>
+              </pre>
+            </div>
           </div>
         `
       })
@@ -434,13 +574,33 @@
         template: `
           <div>
             <h1>Overlay Up Full</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-            <hr>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            <p style="margin-bottom: 25px;">The overlay grows from the bottom to the top and then shrinks from bottom to the top.</p>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Global Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions globally by defining the name property</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">&lt;vue-page-transition name="overlay-up-full"&gt;
+  &lt;router-view /&gt;
+&lt;/vue-page-transition&gt;</code>
+              </pre>
+            </div>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Local Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions locally by passing a transition's meta field to your route.</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld,
+      // overwrite default transition
+      meta: { transition: 'overlay-up-full' },
+    },
+  ]
+})</code>
+              </pre>
+            </div>
           </div>
         `
       })
@@ -448,14 +608,34 @@
       var overlayRightFull = Vue.component('overlay-right-full', {
         template: `
           <div>
-            <h1>Overlay Up Full</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-            <hr>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            <h1>Overlay Right Full</h1>
+            <p style="margin-bottom: 25px;">The overlay grows from the left to the right and then shrinks from left to the right.</p>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Global Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions globally by defining the name property</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">&lt;vue-page-transition name="overlay-right-full"&gt;
+  &lt;router-view /&gt;
+&lt;/vue-page-transition&gt;</code>
+              </pre>
+            </div>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Local Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions locally by passing a transition's meta field to your route.</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld,
+      // overwrite default transition
+      meta: { transition: 'overlay-right-full' },
+    },
+  ]
+})</code>
+              </pre>
+            </div>
           </div>
         `
       })
@@ -464,13 +644,33 @@
         template: `
           <div>
             <h1>Overlay Left Full</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-            <hr>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            <p style="margin-bottom: 25px;">The overlay grows from the left to the right and then shrinks from left to the right.</p>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Global Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions globally by defining the name property</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">&lt;vue-page-transition name="overlay-left-full"&gt;
+  &lt;router-view /&gt;
+&lt;/vue-page-transition&gt;</code>
+              </pre>
+            </div>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Local Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions locally by passing a transition's meta field to your route.</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld,
+      // overwrite default transition
+      meta: { transition: 'overlay-left-full' },
+    },
+  ]
+})</code>
+              </pre>
+            </div>
           </div>
         `
       })
@@ -479,13 +679,33 @@
         template: `
           <div>
             <h1>Overlay Up Down</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-            <hr>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            <p style="margin-bottom: 25px;">The overlay grows from the bottom and top at the same time and back.</p>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Global Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions globally by defining the name property</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">&lt;vue-page-transition name="overlay-up-down"&gt;
+  &lt;router-view /&gt;
+&lt;/vue-page-transition&gt;</code>
+              </pre>
+            </div>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Local Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions locally by passing a transition's meta field to your route.</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld,
+      // overwrite default transition
+      meta: { transition: 'overlay-up-down' },
+    },
+  ]
+})</code>
+              </pre>
+            </div>
           </div>
         `
       })
@@ -494,13 +714,33 @@
         template: `
           <div>
             <h1>Overlay Left Right</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
-            <hr>
-            <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            <p style="margin-bottom: 25px;">The overlay grows from the left and right at the same time and back.</p>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Global Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions globally by defining the name property</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">&lt;vue-page-transition name="overlay-left-right"&gt;
+  &lt;router-view /&gt;
+&lt;/vue-page-transition&gt;</code>
+              </pre>
+            </div>
+            <h2 style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">Local Usage</h2>
+            <p style="margin-bottom: 15px;">You can use transitions locally by passing a transition's meta field to your route.</p>
+            <div id="codebox" style="margin-bottom: 30px;">
+              <pre style="display: flex; background-color: #f9f9f9; box-shadow: 0 1px 1px rgba(0,0,0,.125); width: fit-content;">
+                <code data-language="html" style="background-color: #f9f9f9; padding: 15px; width: 500px;">export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld,
+      // overwrite default transition
+      meta: { transition: 'overlay-left-right' },
+    },
+  ]
+})</code>
+              </pre>
+            </div>
           </div>
         `
       })

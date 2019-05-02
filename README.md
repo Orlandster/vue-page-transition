@@ -122,7 +122,7 @@ Here you can find a list of all the available transitions so far.
     - [Overlay Up](#overlay-up)
     - [Overlay Right](#overlay-right)
     - [Overlay Down](#overlay-down)
-    - [Overlay Right](#overlay-right-1)
+    - [Overlay Left](#overlay-left)
     - [Overlay Down Full](#overlay-down-full)
     - [Overlay Right Full](#overlay-right-full)
     - [Overlay Up Full](#overlay-up-full)
@@ -205,12 +205,12 @@ The overlay grows from the top to the bottom and back.
 <vue-page-transition name="overlay-down">...</vue-page-transition>
 ```
 
-### Overlay Right
-The overlay grows from the left to the right and back.
+### Overlay Left
+The overlay grows from the right to the left and back.
 
 **Usage:**
 ```html
-<vue-page-transition name="overlay-right">...</vue-page-transition>
+<vue-page-transition name="overlay-left">...</vue-page-transition>
 ```
 
 ### Overlay Down Full
