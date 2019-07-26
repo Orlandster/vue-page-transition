@@ -73,6 +73,98 @@ As a default the `fade` animation will be applied. If you want to use another an
 You can find a list of all available transitions in the following section.
 
 > Notice: You can use the `vue-page-transition` component to wrap any element you would like to. The `router-view` is just the most commone use case.
+## Usage With NuxtJs
+To get stated simply create a "vue-page-transition.js" plugin in the plugins folder
+
+Place the bellow code within this folder 
+
+```javascript
+import Vue from 'vue'
+import VuePageTransition from 'vue-page-transition'
+
+Vue.use(VuePageTransition)
+```
+
+Import to the nuxt.comfig.js 
+```javascript
+plugins: [
+    ...
+    {
+      src: "~/plugins/vue-page-transition",
+      ssr: true
+    },
+    ...
+  ],
+```
+
+```html
+<vue-page-transition name="fade-in-right">
+  <nuxt />
+</vue-page-transition>
+```
+
+
+## Overwrite transiton for single route in Nuxt 
+### Note: This where it gets tricky because nuxt doesn't make use the "meta" field as in vue-router.
+The bellow are the steps to work around this issue.
+
+1. Create a "middleware" folder with an animation.js and place these within it
+
+```javascript
+export default ({
+  route,
+  app
+}) => {
+  const animation = route.meta.reduce((animation, meta) => meta.animation || animation, 'fade-in-up')
+  app.store.commit('SET_ANIMATION', animation)
+}
+```
+
+2. Now go to store and in the index.js
+```javascript
+export const state = () => ({ // = data
+  ...
+  animation: 'fade-in-up',
+  ...
+});
+
+export const mutations = {
+  ..., 
+  
+  SET_ANIMATION(state, animation) {
+    state.animation = animation
+  },
+  
+}
+```
+3. Import the middleware to nuxt.config.js
+
+```javascript
+export default {
+  router: {
+    middleware: ['animation']
+  },
+  css: []
+}
+```
+
+4. At this point you can use it at the layout/default page like so: 
+
+```html
+<vue-page-transition :name="$store.state.animation">
+        <nuxt />
+</vue-page-transition>
+```
+
+5. Now for every route you want to add a different page transition to just add 
+
+```javascript
+export default {
+  meta: {
+    animation: 'fade-in-right' // Or any of the bellow listed transition.
+  }
+}
+```
 
 ## Properties / Attributes
 You can make use of the following properties in order to customize your typing expirience:
