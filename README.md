@@ -75,11 +75,21 @@ You can find a list of all available transitions in the following section.
 > Notice: You can use the `vue-page-transition` component to wrap any element you would like to. The `router-view` is just the most commone use case.
 
 ## Properties / Attributes
-You can make use of the following properties in order to customize your typing expirience:
+You can make use of the following properties in order to customize your typing experience:
 
 | Property | Type   | Description                         | Example                  |
 |----------|--------|-------------------------------------|--------------------------|
 | name     | String | The name of the desired transition. | `name="'fade-in-right'"` |
+| beforeEnter     | Function | Function which will fire on before-enter event. | `@beforeEnter="sampleMethod"` |
+| enter     | Function | Function which will fire on enter event. | `@enter="sampleMethod"` |
+| afterEnter     | Function | Function which will fire on after-enter event. | `@afterEnter="sampleMethod"` |
+| enterCancelled     | Function | Function which will fire on enter-cancelled event. | `@enterCancelled="sampleMethod"` |
+| beforeLeave     | Function | Function which will fire on before-leave event. | `@beforeLeave="sampleMethod"` |
+| leave     | Function | Function which will fire on leave event | `@leave="sampleMethod"` |
+| afterLeave     | Function | Function which will fire on after-leave event. | `@afterLeave="sampleMethod"` |
+| leaveCancelled     | Function | Function which will fire on leave-cancelled event. | `@leaveCancelled="sampleMethod"` |
+
+More info on javascript transition hooks: https://vuejs.org/v2/guide/transitions.html#JavaScript-Hooks
 
 ## Overwrite transiton for single route
 We've now covered how to set up a global transition by using the `name` attribute. But what if I want to use multiple transitions depending on the route? In this case you can simple add a `transition` property to the meta fields of your specific route. 

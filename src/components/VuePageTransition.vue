@@ -3,6 +3,14 @@
     <transition
       :name="transition"
       :mode="mode"
+      @before-enter="$emit('before-enter')"
+      @enter="$emit('enter')"
+      @after-enter="$emit('after-enter')"
+      @enter-cancelled="$emit('enter-cancelled')"
+      @before-leave="$emit('before-leave')"
+      @leave="$emit('leave')"
+      @after-leave="$emit('after-leave')"
+      @leave-cancelled="$emit('leave-cancelled')"
     >
       <slot></slot>
     </transition>
@@ -16,7 +24,11 @@
 <script>
 export default {
   name: 'vue-page-transition',
-  props: ['name'],
+  props: {
+    name: {
+      type: String
+    }
+  },
   data () {
     return {
       transition: 'fade',
