@@ -80,14 +80,14 @@ You can make use of the following properties in order to customize your typing e
 | Property | Type   | Description                         | Example                  |
 |----------|--------|-------------------------------------|--------------------------|
 | name     | String | The name of the desired transition. | `name="'fade-in-right'"` |
-| beforeEnter     | Function | Function which will fire on before-enter event. | `:beforeEnter="sampleMethod"` |
-| enter     | Function | Function which will fire on enter event. | `:enter="sampleMethod"` |
-| afterEnter     | Function | Function which will fire on after-enter event. | `:afterEnter="sampleMethod"` |
-| enterCancelled     | Function | Function which will fire on enter-cancelled event. | `:enterCancelled="sampleMethod"` |
-| beforeLeave     | Function | Function which will fire on before-leave event. | `:beforeLeave="sampleMethod"` |
-| leave     | Function | Function which will fire on leave event | `:leave="sampleMethod"` |
-| afterLeave     | Function | Function which will fire on after-leave event. | `:afterLeave="sampleMethod"` |
-| leaveCancelled     | Function | Function which will fire on leave-cancelled event. | `:leaveCancelled="sampleMethod"` |
+| beforeEnter     | Function | Function which will fire on before-enter event. | `@beforeEnter="sampleMethod"` |
+| enter     | Function | Function which will fire on enter event. | `@enter="sampleMethod"` |
+| afterEnter     | Function | Function which will fire on after-enter event. | `@afterEnter="sampleMethod"` |
+| enterCancelled     | Function | Function which will fire on enter-cancelled event. | `@enterCancelled="sampleMethod"` |
+| beforeLeave     | Function | Function which will fire on before-leave event. | `@beforeLeave="sampleMethod"` |
+| leave     | Function | Function which will fire on leave event | `@leave="sampleMethod"` |
+| afterLeave     | Function | Function which will fire on after-leave event. | `@afterLeave="sampleMethod"` |
+| leaveCancelled     | Function | Function which will fire on leave-cancelled event. | `@leaveCancelled="sampleMethod"` |
 
 More info on javascript transition hooks: https://vuejs.org/v2/guide/transitions.html#JavaScript-Hooks
 

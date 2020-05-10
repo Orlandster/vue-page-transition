@@ -3,14 +3,14 @@
     <transition
       :name="transition"
       :mode="mode"
-      @before-enter="beforeEnter()"
-      @enter="enter()"
-      @after-enter="afterEnter()"
-      @enter-cancelled="enterCancelled()"
-      @before-leave="beforeLeave()"
-      @leave="leave()"
-      @after-leave="afterLeave()"
-      @leave-cancelled="leaveCancelled()"
+      @before-enter="$emit('before-enter')"
+      @enter="$emit('enter')"
+      @after-enter="$emit('after-enter')"
+      @enter-cancelled="$emit('enter-cancelled')"
+      @before-leave="$emit('before-leave')"
+      @leave="$emit('leave')"
+      @after-leave="$emit('after-leave')"
+      @leave-cancelled="$emit('leave-cancelled')"
     >
       <slot></slot>
     </transition>
@@ -27,31 +27,7 @@ export default {
   props: {
     name: {
       type: String
-    },
-    beforeEnter: {
-      type: Function
-    },
-    enter: {
-      type: Function
-    },
-    afterEnter: {
-      type: Function
-    },
-    enterCancelled: {
-      type: Function
-    },
-    beforeLeave: {
-      type: Function
-    },
-    leave: {
-      type: Function
-    },
-    afterLeave: {
-      type: Function
-    },
-    leaveCancelled: {
-      type: Function
-    },
+    }
   },
   data () {
     return {
