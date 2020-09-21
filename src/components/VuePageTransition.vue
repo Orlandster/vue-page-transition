@@ -24,6 +24,7 @@ export default {
     }
   },
   created () {
+    this.transition = this.$props.name;
     this.$router.beforeEach((to, from, next) => {
       this.transition = to.meta.transition
         ? to.meta.transition
