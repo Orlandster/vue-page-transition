@@ -16,7 +16,12 @@
 <script>
 export default {
   name: 'vue-page-transition',
-  props: ['name'],
+  props: {
+    name: {
+      type: String,
+      default: 'fade'
+    }
+  },
   data () {
     return {
       transition: 'fade',
