@@ -1,11 +1,8 @@
 {
-  "name": "vue-page-transition",
+  "name": "@davincihealthcare/vue-page-transition",
   "description": "A lean Vue.js plugin for page / route transitions.",
-  "version": "0.2.2",
-  "author": {
-    "name": "Orlando Wenzinger",
-    "email": "orlando.wenzinger@bluewin.ch"
-  },
+  "version": "1.0.0",
+  "author": "Orlando Wenzinger <orlando.wenzinger@bluewin.ch>",
   "keywords": [
     "vue",
     "vuejs",
@@ -21,7 +18,10 @@
   "bugs": {
     "url": "https://github.com/Orlandster/vue-page-transition/issues"
   },
-  "repository": "https://github.com/Orlandster/vue-page-transition",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orlandster/vue-page-transition.git"
+  },
   "license": "MIT",
   "main": "dist/vue-page-transition.common.js",
   "unpkg": "dist/vue-page-transition.browser.js",
@@ -53,5 +53,8 @@
     "vue-template-compiler": "^2.1.6",
     "webpack": "^2.1.0-beta.28",
     "webpack-merge": "^1.1.2"
+  },
+  "dependencies": {
+    "np": "^7.0.0"
   }
 }
