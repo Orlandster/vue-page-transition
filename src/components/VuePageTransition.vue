@@ -1,9 +1,6 @@
 <template>
   <div>
-    <transition
-      :name="transition"
-      :mode="mode"
-    >
+    <transition :name="transition" :mode="mode">
       <slot></slot>
     </transition>
     <div class="overlay-top"></div>
@@ -17,18 +14,17 @@
 export default {
   name: 'vue-page-transition',
   props: ['name'],
-  data () {
+  data: function () {
     return {
       transition: 'fade',
       mode: 'out-in',
     }
   },
-  created () {
+  created: function () {
     this.$router.beforeEach((to, from, next) => {
       this.transition = to.meta.transition
-        ? to.meta.transition
-        : this.$props.name
-
+          ? to.meta.transition
+          : this.$props.name
       next()
     })
   },
@@ -36,10 +32,10 @@ export default {
 </script>
 
 <style>
-  :root {
-    --overlay-bg: #1867c0;
-    --transition-duration: .35s;
-  }
+:root {
+  --overlay-bg: #1867c0;
+  --transition-duration: .35s;
+}
 </style>
 
 <style lang="scss" scoped>
