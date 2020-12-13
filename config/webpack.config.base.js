@@ -1,5 +1,5 @@
 var webpack = require('webpack')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 var outputFile = 'vue-page-transition'
 
@@ -18,18 +18,16 @@ module.exports = {
       {
         test: /.js$/,
         use: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          loaders: {
-            css: ExtractTextPlugin.extract('css-loader'),
-            sass: ExtractTextPlugin.extract('css-loader!sass-loader'),
-            scss: ExtractTextPlugin.extract('css-loader!sass-loader'),
-          },
-        },
+        test: /\.(vue|css)$/,
+        use: [
+          process.env.NODE_ENV !== 'production'
+              ? 'vue-style-loader'
+              : MiniCssExtractPlugin.loader,
+          'css-loader'
+        ]
       },
     ],
   },
@@ -37,6 +35,13 @@ module.exports = {
     new webpack.DefinePlugin({
       'VERSION': JSON.stringify(config.version),
     }),
-    new ExtractTextPlugin(outputFile + '.css'),
+    new MiniCssExtractPlugin({
+      filename: outputFile + '.css'
+    }),
   ],
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js',
+    },
+  },
 }
