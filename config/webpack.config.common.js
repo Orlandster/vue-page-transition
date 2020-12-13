@@ -11,7 +11,7 @@ module.exports = merge(base, {
     filename: outputFile + '.common.js',
     libraryTarget: 'commonjs2',
   },
-  target: 'node',
+  //target: 'node',
   optimization: {
     minimize: true
   }
