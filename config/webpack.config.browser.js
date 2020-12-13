@@ -1,12 +1,10 @@
-var webpack = require('webpack')
 const { merge } = require('webpack-merge')
-var base = require('./webpack.config.base')
-var path = require('path')
-
-var outputFile = 'vue-page-transition'
-var globalName = 'VuePageTransition'
-
+const base = require('./webpack.config.base')
+const path = require('path')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+
+const outputFile = 'vue-page-transition'
+const globalName = 'VuePageTransition'
 
 module.exports = merge(base, {
   output: {

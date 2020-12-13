@@ -15,9 +15,8 @@ export {
 
 // Plugin
 const plugin = {
-  /* eslint-disable no-undef */
   version: VERSION,
-  install,
+  install: install,
 }
 
 export default plugin

@@ -1,34 +1,34 @@
-var webpack = require('webpack')
-var MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const webpack = require('webpack')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
-var outputFile = 'vue-page-transition'
+const outputFile = 'vue-page-transition'
 
-var config = require('../package.json')
+const config = require('../package.json')
 
 module.exports = {
   entry: './src/index.js',
   module: {
     rules: [
       {
-        enforce: 'pre',
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/,
-      },
-      {
         test: /.js$/,
         use: 'babel-loader',
         exclude: /node_modules/,
       },
       {
-        test: /\.(vue|css)$/,
+        test: /\.css$/,
         use: [
           process.env.NODE_ENV !== 'production'
               ? 'vue-style-loader'
               : MiniCssExtractPlugin.loader,
-          'css-loader'
+          'css-loader',
+          'sass-loader'
         ]
       },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      }
     ],
   },
   plugins: [
@@ -38,6 +38,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: outputFile + '.css'
     }),
+    new VueLoaderPlugin(),
   ],
   resolve: {
     alias: {
