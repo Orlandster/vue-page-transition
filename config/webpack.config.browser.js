@@ -1,10 +1,10 @@
-var webpack = require('webpack')
-var merge = require('webpack-merge')
-var base = require('./webpack.config.base')
-var path = require('path')
+const { merge } = require('webpack-merge')
+const base = require('./webpack.config.base')
+const path = require('path')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
-var outputFile = 'vue-page-transition'
-var globalName = 'VuePageTransition'
+const outputFile = 'vue-page-transition'
+const globalName = 'VuePageTransition'
 
 module.exports = merge(base, {
   output: {
@@ -18,12 +18,22 @@ module.exports = merge(base, {
     // With their global name
     // Example: 'lodash': '_'
   },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: true,
-      },
-      mangle: false,
-    }),
-  ],
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          ecma: 5,
+          ie8: false,
+          warnings: false,
+          parse: {},
+          compress: {},
+          mangle: true,
+          keep_fnames: true,
+          output: null,
+          toplevel: false,
+          nameCache: null,
+        },
+      })
+    ],
+  },
 })

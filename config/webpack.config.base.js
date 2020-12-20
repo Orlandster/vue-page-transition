@@ -1,41 +1,48 @@
-var webpack = require('webpack')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+const webpack = require('webpack')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
-var outputFile = 'vue-page-transition'
+const outputFile = 'vue-page-transition'
 
-var config = require('../package.json')
+const config = require('../package.json')
 
 module.exports = {
   entry: './src/index.js',
   module: {
     rules: [
       {
-        enforce: 'pre',
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
+        test: /.js$/,
+        use: 'babel-loader',
         exclude: /node_modules/,
       },
       {
-        test: /.js$/,
-        use: 'babel-loader',
+        test: /\.(scss|css)$/,
+        use: [
+          process.env.NODE_ENV !== 'production'
+              ? 'vue-style-loader'
+              : MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
       },
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          loaders: {
-            css: ExtractTextPlugin.extract('css-loader'),
-            sass: ExtractTextPlugin.extract('css-loader!sass-loader'),
-            scss: ExtractTextPlugin.extract('css-loader!sass-loader'),
-          },
-        },
-      },
+        loader: 'vue-loader'
+      }
     ],
   },
   plugins: [
     new webpack.DefinePlugin({
       'VERSION': JSON.stringify(config.version),
     }),
-    new ExtractTextPlugin(outputFile + '.css'),
+    new MiniCssExtractPlugin({
+      filename: outputFile + '.css'
+    }),
+    new VueLoaderPlugin(),
   ],
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js',
+    },
+  },
 }
