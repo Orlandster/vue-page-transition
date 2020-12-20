@@ -1,3 +1,5 @@
+import './styles/transitions.scss';
+
 import 'core-js/stable'
 import 'regenerator-runtime/runtime.js'
 
