@@ -6,10 +6,10 @@
     >
       <slot></slot>
     </transition>
-    <div class="overlay-top" :style="model.overlay"></div>
-    <div class="overlay-right" :style="model.overlay"></div>
-    <div class="overlay-bottom" :style="model.overlay"></div>
-    <div class="overlay-left" :style="model.overlay"></div>
+    <div class="overlay overlay-top" :style="model.overlay"></div>
+    <div class="overlay overlay-right" :style="model.overlay"></div>
+    <div class="overlay overlay-bottom" :style="model.overlay"></div>
+    <div class="overlay overlay-left" :style="model.overlay"></div>
   </div>
 </template>
 
