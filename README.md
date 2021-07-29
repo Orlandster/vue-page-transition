@@ -63,7 +63,7 @@ Minimal setup:
   <router-view/>
 </vue-page-transition>
 ```
-As a default the `fade` animation will be applied. If you want to use another animation you can do so by passing it via the `name` attribute:
+==By default any animation will be applied.== If you want to use an animation you can do so by passing it via the `name` attribute:
 ```html
 <vue-page-transition name="fade-in-right">
   <router-view/>
@@ -77,9 +77,11 @@ You can find a list of all available transitions in the following section.
 ## Properties / Attributes
 You can make use of the following properties in order to customize your typing expirience:
 
-| Property | Type   | Description                         | Example                  |
-|----------|--------|-------------------------------------|--------------------------|
-| name     | String | The name of the desired transition. | `name="'fade-in-right'"` |
+| Property | Type             | Description                                  | Example                             |
+|----------|------------------|----------------------------------------------|-------------------------------------|
+| mode     | String           | The mode of the desired transition.          | `mode="in-out"`                     |
+| name     | String           | The name of the desired transition.          | `name="fade-in-right"`              |
+| overlay  | String or Object | The overlay style of the desired transition. | `:overlay="{ background: '#000' }"` |
 
 ## Overwrite transiton for single route
 We've now covered how to set up a global transition by using the `name` attribute. But what if I want to use multiple transitions depending on the route? In this case you can simple add a `transition` property to the meta fields of your specific route. 
@@ -94,7 +96,7 @@ export default new Router({
       name: 'HelloWorld',
       component: HelloWorld,
       // overwrite default transition
-      meta: { transition: 'zoom' },
+      meta: { transition: { name: 'overlay-down-full', overlay: { background: '#000' }}},
     },
   ]
 })
