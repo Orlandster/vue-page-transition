@@ -16,7 +16,12 @@
 <script>
 export default {
   name: 'vue-page-transition',
-  props: ['name'],
+  props: {
+    name: {
+      type: String,
+      default: 'fade'
+    }
+  },
   data () {
     return {
       transition: 'fade',
@@ -24,6 +29,7 @@ export default {
     }
   },
   created () {
+    this.transition = this.$props.name;
     this.$router.beforeEach((to, from, next) => {
       this.transition = to.meta.transition
         ? to.meta.transition
